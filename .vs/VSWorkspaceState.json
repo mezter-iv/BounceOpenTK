@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Bounce"
+    "\\Bounce",
+    "\\Bounce\\Bounce"
   ],
-  "SelectedNode": "\\Bounce\\Bounce.sln",
+  "SelectedNode": "\\Bounce\\Bounce\\Game.cs",
   "PreviewInSolutionExplorer": false
 }
