@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bounce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccf0b5fa331bcd6bca5ad387fa4283976f271693")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af80710815aedd736e7a2460c3e351a97c2fed76")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bounce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bounce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
