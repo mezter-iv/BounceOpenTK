@@ -13,18 +13,42 @@ namespace Bounce
 {
     internal class Game : GameWindow
     {
-        float[] vertices = { 
-            0f, 0.5f, 0f, // top vertex
-            -0.5f, -0.5f, 0f, // bottom left
-            0.5f, -0.5f, 0f // bottom right
-        };
+        Vector2 position = new Vector2(0.0f, 0.0f);
+        Vector2 velocity = new Vector2(1f, 1.5f);
 
-        int SCREENWIDTH, SCREENHEIGHT, vao, shaderprogram;
+        // Define the number of vertices for the circle's perimeter
+        int numVertices = 30;
+        // Define the radius of the circle
+        float radius = 0.5f;
+
+        // Create a list to store the vertices
+        List<float> circleVertices = new List<float>();
+
+        float[] vertices;
+
+        int SCREENWIDTH, SCREENHEIGHT, vao, shaderprogram, vbo;
 
         public Game(int width, int height) : base(GameWindowSettings.Default, NativeWindowSettings.Default)
         {
             SCREENHEIGHT = height;
             SCREENWIDTH = width;
+
+            circleVertices.Add(0f);
+            circleVertices.Add(0f);
+            circleVertices.Add(0f);
+
+            for (int i = 0; i <= numVertices; i++)
+            {
+                float angle = 2.0f * MathF.PI * i / numVertices;
+                float x = radius * MathF.Cos(angle);
+                float y = radius * MathF.Sin(angle);
+
+                circleVertices.Add(x);
+                circleVertices.Add(y);
+                circleVertices.Add(0f);
+            }
+
+            vertices = circleVertices.ToArray();
 
             // center screen
             this.CenterWindow(new Vector2i(SCREENWIDTH, SCREENHEIGHT));
@@ -44,14 +68,14 @@ namespace Bounce
 
             vao = GL.GenVertexArray();
 
-            int vbo = GL.GenBuffer();
+            vbo = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ArrayBuffer, vbo);
             GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length*sizeof(float), vertices, BufferUsageHint.StaticDraw);
 
             // bind the vao
 
             GL.BindVertexArray(vao);
-            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, 0);
+            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), 0);
             GL.EnableVertexArrayAttrib(vao, 0);
 
             GL.BindBuffer(BufferTarget.ArrayBuffer, 0); // unbinding the vbo
@@ -91,10 +115,15 @@ namespace Bounce
             GL.ClearColor(0.6f, 0.3f, 1f, 1f);
             GL.Clear(ClearBufferMask.ColorBufferBit);
 
+            // Get the uniform location
+            int positionUniformLocation = GL.GetUniformLocation(shaderprogram, "uPosition");
+            // Pass the position to the shader
+            GL.Uniform2(positionUniformLocation, position);
+
             // draw triangle
             GL.UseProgram(shaderprogram);
             GL.BindVertexArray(vao);
-            GL.DrawArrays(PrimitiveType.Triangles, 0, 3);
+            GL.DrawArrays(PrimitiveType.TriangleFan, 0, numVertices + 2);
 
 
 
@@ -106,6 +135,20 @@ namespace Bounce
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
             base.OnUpdateFrame(args);
+
+            position += velocity * (float)args.Time;
+            float halfSizeX = 0.5f;
+            float halfSizeY = 0.5f;
+
+            if (position.X + halfSizeX > 1.0f || position.X - halfSizeX < -1.0f)
+            {
+                velocity.X *= -1;
+            }
+
+            if (position.Y + halfSizeY > 1.0f || position.Y - halfSizeY < -1.0f)
+            {
+                velocity.Y *= -1;
+            }
         }
 
         public static string LoadShaderSourse(string filePath) {
