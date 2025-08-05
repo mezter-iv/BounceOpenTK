@@ -19,7 +19,7 @@ namespace Bounce
         // Define the number of vertices for the circle's perimeter
         int numVertices = 120;
         // Define the radius of the circle
-        float radius = 0.1f;
+        float radius = 0.05f;
 
         // Create a list to store the vertices
         List<float> circleVertices = new List<float>();
@@ -137,15 +137,13 @@ namespace Bounce
             base.OnUpdateFrame(args);
 
             position += velocity * (float)args.Time;
-            float halfSizeX = 0.5f;
-            float halfSizeY = 0.5f;
 
-            if (position.X + halfSizeX > 1.0f || position.X - halfSizeX < -1.0f)
+            if (position.X + radius > 1.0f || position.X - radius < -1.0f)
             {
                 velocity.X *= -1;
             }
 
-            if (position.Y + halfSizeY > 1.0f || position.Y - halfSizeY < -1.0f)
+            if (position.Y + radius > 1.0f || position.Y - radius < -1.0f)
             {
                 velocity.Y *= -1;
             }
