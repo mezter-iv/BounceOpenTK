@@ -17,9 +17,9 @@ namespace Bounce
         Vector2 velocity = new Vector2(1f, 1.5f);
 
         // Define the number of vertices for the circle's perimeter
-        int numVertices = 30;
+        int numVertices = 120;
         // Define the radius of the circle
-        float radius = 0.5f;
+        float radius = 0.1f;
 
         // Create a list to store the vertices
         List<float> circleVertices = new List<float>();

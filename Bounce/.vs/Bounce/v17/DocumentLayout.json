@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\BounceOpenTK\\Bounce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\bounceopentk\\bounce\\bounce\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|solutionrelative:bounce\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\bounceopentk\\bounce\\bounce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|solutionrelative:bounce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\bounceopentk\\bounce\\bounce\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|solutionrelative:bounce\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82748827-0060-4F47-BB23-E56062502667}|Bounce\\Bounce.csproj|c:\\users\\vovan\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\bounceopentk\\bounce\\bounce\\shaders\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,25 +54,24 @@
               "RelativeToolTip": "Bounce\\Shaders\\Default.vert",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-01T08:55:35.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T08:55:35.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\BounceOpenTK\\Bounce\\Bounce\\Game.cs",
               "RelativeDocumentMoniker": "Bounce\\Game.cs",
               "ToolTip": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\BounceOpenTK\\Bounce\\Bounce\\Game.cs",
               "RelativeToolTip": "Bounce\\Game.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAUwJUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T19:22:48.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vovan\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\BounceOpenTK\\Bounce\\Bounce\\Program.cs",
               "RelativeDocumentMoniker": "Bounce\\Program.cs",
